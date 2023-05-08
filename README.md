@@ -1,2 +1,0 @@
-# PortfolioNicholasLacerda
-My personal webpage
