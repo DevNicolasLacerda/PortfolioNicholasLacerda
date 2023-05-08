@@ -10,6 +10,7 @@
 
 :root {
       --white: #edf0f1;
+      --black: #111;
 }
 
 html {
@@ -21,6 +22,7 @@ body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      width: 100%;
 }
 
 li,
@@ -38,6 +40,8 @@ header {
       justify-content: space-between;
       align-items: center;
       padding: 30px 10%;
+      background-color: var(--black);
+      border-bottom: 1px solid var(--white);
 }
 
 .logo {
@@ -106,6 +110,9 @@ header {
 
 .mobile-menu {
       display: none;
+      background-color: var(--black);
+      border-bottom: 1px solid var(--white);
+      margin-bottom: auto;
 }
 
 .mobile-menu ul {
@@ -164,7 +171,7 @@ header {
 button {
       margin-left: 20px;
       padding: 9px 25px;
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(20px);
       border: 2px solid var(--white);
       border-radius: 50px;
       font-size: 18px;
@@ -172,12 +179,12 @@ button {
       width: 150px;
       cursor: pointer;
       transition: all 0.3s ease 0s;
-      background-color: #24252a;
+      background-color: var(--black);
 }
 
 button:hover {
       background: var(--white);
-      color: #111;
+      color: var(--black);
       font-weight: bold;
 }
 
@@ -185,16 +192,19 @@ button:hover {
 
 main .home-section {
       height: 100vh;
-      width: 100%;
-      background: rgb(10, 9, 9);
+      width: 100%; 
+      background-color: rgb(10, 9, 9);
       justify-content: center;
       display: flex;
+      overflow: hidden;
 }
 
 main .sobre-section {
       height: 100vh;
       width: 100%;
-      background: rgb(196, 25, 25);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
 }
 
 main .tecnologias-section {
@@ -299,12 +309,72 @@ main .contato-section .container-contato #btn-enviar:hover {
 
 */
 
+main .home-section .container-autotext {
+      position: absolute;
+      padding-top: 200px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 150px;
+      height: 200px;
+      width: 400px;
+}
+
+main .home-section .container-autotext .auto-type {
+      position: relative;
+      font-size: 40px;
+      font-weight: 600;
+      overflow: hidden;
+      color: #d257b2;
+      background-image: -webkit-linear-gradient(45deg, #d257b2 39%, #d5f910 100%, #985c67 37%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+main .home-section .container-autotext .auto-type:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgb(10, 9, 9);
+      border-left: 2px solid #4070F4;
+      animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+  40%, 60%{
+      left: calc(100% + 4px);
+  }
+  100%{
+      left: 0%;
+  }
+}
+
+main .container-autotext h1 {
+      color: var(--white);
+      text-align: center;
+      font-size: 25px;
+}
+
+main .container-autotext .text-auto {
+      color: var(--white);
+      text-align: center;
+      font-size: 50px;
+      font-weight: bold;
+}
+
+
 main .container {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding-top: 200px;
+      top: 300px;
+      width: 400px;
+      height: 200px;
 }
 
 main .home-section #baixar-cv {
@@ -313,6 +383,7 @@ main .home-section #baixar-cv {
       width: 150px;
       height: 50px;
       padding: 5px;
+      font-size: 15px;
       display: flex;
       border-radius: 10px;
       border: 2px solid var(--white);
@@ -321,14 +392,14 @@ main .home-section #baixar-cv {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      font-weight: bold;
       outline: none;
       transition: all 0.4s;
 }
 
 main .home-section #baixar-cv:hover {
       background: var(--white);
-      color: #111;
-      font-weight: bold;
+      color: var(--black);
 }
 
 main .home-section #btn-linkedin {
@@ -337,6 +408,8 @@ main .home-section #btn-linkedin {
       width: 150px;
       height: 50px;
       padding: 5px;
+      font-weight: bold;
+      font-size: 15px;
       display: flex;
       border-radius: 10px;
       border: 2px solid var(--white);
@@ -352,14 +425,13 @@ main .home-section #btn-linkedin {
 
 main .home-section #btn-linkedin:hover {
       background: var(--white);
-      color: #111;
-      font-weight: bold;
+      color: var(--black);
 }
 
 /*Parte principal do footer*/
 
 footer {
-      background-color: #111;
+      background-color: var(--black);
       height: auto;
       width: 100vw;
       font-family: "Roboto Slab", sans-serif;
@@ -478,7 +550,7 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-      background: #111;
+      background-color: var(--black);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -492,7 +564,7 @@ footer {
 }
 ::-webkit-scrollbar-track:horizontal {
       padding: 3px;
-      background: #111;
+      background-color: var(--black);
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
@@ -531,7 +603,7 @@ footer {
 
 #voltar_topo_btn:hover {
       background: var(--white);
-      color: #111;
+      color: var(--black);
 }
 
 #voltar_topo_btn i {
@@ -550,5 +622,12 @@ footer {
 
       .mobile-menu-icon {
             display: block;
+      }
+}
+
+@media screen and (min-width: 432px)
+{
+      body {
+            text-align: center;
       }
 }
