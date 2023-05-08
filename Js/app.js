@@ -27,6 +27,24 @@ function menuShow() {
       }
 }
 
+// Texto automatico
+
+const text = document.querySelector(".auto-type");
+
+const textLoad = () => {
+setTimeout(() => {
+text.textContent = "Nicholas Lacerda";
+}, 0);
+setTimeout(() => {
+text.textContent = "Front-end";
+}, 4000);
+setTimeout(() => {
+text.textContent = "Developer";
+}, 8000); //1s = 1000 milliseconds
+}
+textLoad();
+setInterval(textLoad, 12000);
+
 /*
 
 const switcher = document.querySelector(".btn_dark");
