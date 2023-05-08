@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto+Slab:wght@300&display=swap");
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+      --white: #edf0f1;
+}
+
+html {
+      scroll-behavior: smooth;
+}
+
+body {
+      background-color: #24252a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+}
+
+li,
+a,
+button {
+      font-family: "Roboto Slab", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--white);
+      text-decoration: none;
+}
+
+header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 10%;
+}
+
+.logo {
+      color: var(--white);
+      cursor: pointer;
+      margin-right: auto;
+      font-family: "Caveat";
+      font-size: 45px;
+}
+
+/* menu web*/
+
+.nav_links {
+      display: flex;
+      list-style: none;
+}
+
+.nav_links a {
+      position: relative;
+      color: var(--white);
+}
+
+.nav_links li {
+      display: inline-block;
+      padding: 0px 20px;
+}
+
+.nav_links li a {
+      transition: all 0.3s ease 0s;
+      letter-spacing: 1px;
+      font-size: 18px;
+}
+
+.nav_links a:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--white);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      border-radius: 25px;
+}
+
+.nav_links a:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+}
+
+/* Fim menu web*/
+
+/* Menu mobile*/
+
+.mobile-menu-icon {
+      display: none;
+}
+
+.mobile-menu-icon {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+}
+
+.mobile-menu {
+      display: none;
+}
+
+.mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 1.2rem;
+      list-style: none;
+}
+
+.mobile-menu ul li {
+      margin: 10px;
+      text-align: center;
+}
+
+.mobile-menu .nav-links-mobile {
+      display: block;
+      padding-top: 1.2rem;
+}
+
+.nav-links-mobile {
+      display: flex;
+      list-style: none;
+}
+
+.nav-links-mobile a {
+      color: var(--white);
+      font-size: 18px;
+}
+
+.mobile-menu .btn_contato {
+      display: block;
+      padding: 1rem 3rem 2rem 1rem;
+}
+
+.mobile-menu .btn_contato button {
+      width: 100%;
+      border-radius: 10px;
+}
+
+.botao-mobile {
+      border: none;
+      background-color: transparent;
+}
+
+.botao-mobile:hover {
+      background-color: transparent;
+}
+
+.open {
+      display: block;
+}
+
+/* Fim menu mobile*/
+
+button {
+      margin-left: 20px;
+      padding: 9px 25px;
+      backdrop-filter: blur(15px);
+      border: 2px solid var(--white);
+      border-radius: 50px;
+      font-size: 18px;
+      height: 50px;
+      width: 150px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      background-color: #24252a;
+}
+
+button:hover {
+      background: var(--white);
+      color: #111;
+      font-weight: bold;
+}
+
+/*Conteudo principal*/
+
+main .home-section {
+      height: 100vh;
+      width: 100%;
+      background: rgb(10, 9, 9);
+      justify-content: center;
+      display: flex;
+}
+
+main .sobre-section {
+      height: 100vh;
+      width: 100%;
+      background: rgb(196, 25, 25);
+}
+
+main .tecnologias-section {
+      height: 100vh;
+      width: 100%;
+      background: rgb(20, 135, 243);
+}
+
+main .projetos-section {
+      height: 100vh;
+      width: 100%;
+      background: rgb(56, 194, 22);
+}
+
+main .contato-section {
+      height: 100vh;
+      width: 100%;
+      background: rgb(134, 134, 134);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+/*
+main .contato-section .contato-titulo h1 {
+      color: var(#111);
+      font-family: "Caveat";
+      font-size: 45px;
+      margin: 15px;
+}
+
+main .contato-section .container-contato {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      width: 26em;
+      height: 35em;
+      background-color: var(--white);
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+      padding: 30px;
+}
+
+main .contato-section .container-contato h3 {
+      text-align: center;
+      font-size: 14px;
+      color: rgb(134, 134, 134);
+}
+
+main .contato-section .container-contato input {
+      border: none;
+      outline: none;
+      width: 13rem;
+      text-align: left;
+      height: 2.5rem;
+      margin: 20px;
+      border-radius: 0.6em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      padding: 5px;
+      color: rgba(0, 0, 0, 0.2);
+}
+
+main .contato-section .container-contato input:focus {
+      background: rgb(134, 134, 134);
+      transition: all 0.3s;
+      color: #000;
+}
+
+main .contato-section .container-contato #area_txt {
+      border: none;
+      outline: none;
+      width: 13rem;
+      text-align: left;
+      height: 9em;
+      margin: 20px;
+      border-radius: 0.6em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      padding: 5px;
+      color: rgba(0, 0, 0, 0.2);
+      resize: none;
+}
+
+main .contato-section .container-contato #area_txt:focus {
+      background: rgb(134, 134, 134);
+      transition: all 0.3s;
+      color: #000;
+}
+
+main .contato-section .container-contato #btn-enviar {
+      text-align: center;
+      border: none;
+      outline: none;
+      margin: 10px;
+      width: 13rem;
+      color: var(--white);
+}
+
+main .contato-section .container-contato #btn-enviar:hover {
+      background: #0f3ed6;
+}
+
+*/
+
+main .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 200px;
+}
+
+main .home-section #baixar-cv {
+      margin: 10px;
+      text-decoration: none;
+      width: 150px;
+      height: 50px;
+      padding: 5px;
+      display: flex;
+      border-radius: 10px;
+      border: 2px solid var(--white);
+      background: rgb(10, 9, 9);
+      color: var(--white);
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.4s;
+}
+
+main .home-section #baixar-cv:hover {
+      background: var(--white);
+      color: #111;
+      font-weight: bold;
+}
+
+main .home-section #btn-linkedin {
+      margin: 10px;
+      text-decoration: none;
+      width: 150px;
+      height: 50px;
+      padding: 5px;
+      display: flex;
+      border-radius: 10px;
+      border: 2px solid var(--white);
+      background: rgb(10, 9, 9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      color: var(--white);
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.4s;
+}
+
+main .home-section #btn-linkedin:hover {
+      background: var(--white);
+      color: #111;
+      font-weight: bold;
+}
+
+/*Parte principal do footer*/
+
+footer {
+      background-color: #111;
+      height: auto;
+      width: 100vw;
+      font-family: "Roboto Slab", sans-serif;
+      padding-top: 40px;
+      color: var(--white);
+}
+
+.footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: auto;
+}
+
+.footer-content .logo_footer {
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 3rem;
+      font-family: "Caveat";
+}
+
+.footer-content p {
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+}
+
+/*Links de redes sociais*/
+
+.redes_sociais {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+}
+
+.redes_sociais li {
+      margin: 0 10px;
+}
+
+.redes_sociais a {
+      text-decoration: none;
+      color: var(--white);
+}
+
+.redes_sociais a i {
+      font-size: 1.8rem;
+      transition: color 0.4s ease;
+}
+
+.redes_sociais a:hover i {
+      color: rgba(0, 136, 169, 0.8);
+}
+
+/*Links para voltar*/
+
+.links_voltar {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+}
+
+.links_voltar li {
+      margin: 0 10px;
+}
+
+.links_voltar a {
+      text-decoration: none;
+      color: var(--white);
+}
+
+.links_voltar a {
+      font-size: 1.1rem;
+      transition: color 0.4s ease;
+}
+
+.links_voltar a:hover {
+      color: rgba(0, 136, 169, 0.8);
+}
+
+/*Parte de baixo do footer*/
+
+.footer-bottom {
+      background: #000;
+      width: 100vw;
+      padding: 20px 0;
+      text-align: center;
+}
+
+.footer-bottom p {
+      font-size: 14px;
+      word-spacing: 2px;
+      text-transform: capitalize;
+}
+
+.footer-bottom span {
+      text-transform: uppercase;
+      opacity: 0.4;
+      font-weight: 200;
+}
+
+/* Personalizacao da scrollbar*/
+
+::-webkit-scrollbar-corner {
+      display: none;
+}
+
+::-webkit-scrollbar {
+      width: 6px;
+}
+
+::-webkit-scrollbar-track {
+      background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+      height: 6px;
+      display: none;
+}
+::-webkit-scrollbar-track:horizontal {
+      padding: 3px;
+      background: #111;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 6px;
+}
+
+/* fim Personalizacao da scrollbar*/
+
+/* Botao voltar topo*/
+#voltar_topo_btn {
+      opacity: 0;
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      display: flex;
+      border-radius: 15px;
+      background: rgb(77, 77, 77);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      color: #313131;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      transition: all 0.4s;
+      box-shadow: 2px 3px 10px #000;
+}
+
+#voltar_topo_btn.active {
+      opacity: 1;
+}
+
+#voltar_topo_btn:hover {
+      background: var(--white);
+      color: #111;
+}
+
+#voltar_topo_btn i {
+      font-size: 1.8rem;
+}
+
+/* Fim Botao voltar topo*/
+
+@media screen and (max-width: 900px) {
+      .btn_contato {
+            display: none;
+      }
+      .nav_links {
+            display: none;
+      }
+
+      .mobile-menu-icon {
+            display: block;
+      }
+}
