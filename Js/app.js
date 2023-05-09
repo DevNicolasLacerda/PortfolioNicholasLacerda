@@ -1,7 +1,9 @@
+// Funcao para voltar ao topo da pagina
+
 const voltar_topo_btn = document.querySelector("#voltar_topo_btn");
 
 window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 100) {
+      if (window.pageYOffset > 200) {
             voltar_topo_btn.classList.add("active");
             voltar_topo_btn.addEventListener("click", function () {
                   //$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -16,6 +18,8 @@ window.addEventListener("scroll", () => {
       }
 });
 
+// Funcao para abrir e fechar o menu
+
 function menuShow() {
       let menuMobile = document.querySelector(".mobile-menu");
       if (menuMobile.classList.contains("open")) {
@@ -27,8 +31,12 @@ function menuShow() {
       }
 }
 
+// Funcao dark and light mode
+
+
 // Texto automatico
 
+/*
 const text = document.querySelector(".auto-type");
 
 const textLoad = () => {
