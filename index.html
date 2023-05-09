@@ -44,9 +44,17 @@
             </div>
             <main>
                   <section id="home-section" class="home-section">
+                        <button name="btn-dark-mode" class="btn-dark-mode" onclick="darkMode()"><i class="fa-solid fa-moon"></i></button>
+                        <div class="container-image-home">
+                              <img src="assets/reactjs-svgrepo-com.svg" alt="Simbolo do framework ReactJs">
+                        </div>
                       <div class="container-autotext">
-                        <h1>Olá, eu sou</h1>
-                        <h1 class="text-auto"><span class="auto-type"></span></h1>
+                        <h1>Olá, eu sou </h1>
+                        <br>
+                              <span class="typer" id="main" data-words="Nicholas Lacerda, Front-End, Developer" data-delay="100" data-deleteDelay="1000"></span>
+                              <span class="cursor" data-owner="main"></span>
+                        <!-- <h1>Olá, eu sou</h1>
+                        <h1 class="text-auto"><span class="auto-type"></span></h1>-->
                       </div>
                       <div class="container">
                         <!--<button class="btn_dark">Dark</button>-->
@@ -111,6 +119,7 @@
                   crossorigin="anonymous"
             ></script>
             <script src="Js/app.js"></script>
+            <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       </body>
 </html>
