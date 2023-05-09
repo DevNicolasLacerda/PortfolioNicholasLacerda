@@ -13,16 +13,11 @@
       --black: #111;
 }
 
-html {
-      scroll-behavior: smooth;
-}
-
 body {
       background-color: #24252a;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      width: 100%;
 }
 
 li,
@@ -113,6 +108,7 @@ header {
       background-color: var(--black);
       border-bottom: 1px solid var(--white);
       margin-bottom: auto;
+      z-index: 999;
 }
 
 .mobile-menu ul {
@@ -193,10 +189,36 @@ button:hover {
 main .home-section {
       height: 100vh;
       width: 100%; 
-      background-color: rgb(10, 9, 9);
+      background: url(../assets/796863.webp);
       justify-content: center;
       display: flex;
-      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.btn-dark-mode {
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      position: absolute;
+      margin: 5px;
+      top: 30px;
+      right: 35px;
+      width: 50px;
+      color: var(--white);
+      padding: 5px;
+}
+
+.btn-dark-mode:hover {
+      background: var(--white);
+}
+
+.btn-dark-mode i {
+      font-size: 1.8rem;
+}
+
+.btn-dark-mode i:hover{
+      color: var(--black);
 }
 
 main .sobre-section {
@@ -309,9 +331,24 @@ main .contato-section .container-contato #btn-enviar:hover {
 
 */
 
+main .home-section .container-image-home {
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      top: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+main .home-section .container-image-home img {
+      height: 200px;
+      width: 200px;
+}
+
 main .home-section .container-autotext {
       position: absolute;
-      padding-top: 200px;
+      top: 300px;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -319,6 +356,24 @@ main .home-section .container-autotext {
       height: 200px;
       width: 400px;
 }
+
+.typer {
+      position: relative;
+      font-size: 40px;
+      font-weight: 600;
+      color: #d257b2;
+      background-image: -webkit-linear-gradient(45deg, #d257b2 39%, #d5f910 100%, #985c67 37%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.cursor {
+      position: absolute;
+      height: 25%;
+      border-left: 2px solid #4070F4;
+}
+/*
 
 main .home-section .container-autotext .auto-type {
       position: relative;
@@ -351,6 +406,7 @@ main .home-section .container-autotext .auto-type:before{
       left: 0%;
   }
 }
+*/
 
 main .container-autotext h1 {
       color: var(--white);
@@ -358,21 +414,13 @@ main .container-autotext h1 {
       font-size: 25px;
 }
 
-main .container-autotext .text-auto {
-      color: var(--white);
-      text-align: center;
-      font-size: 50px;
-      font-weight: bold;
-}
-
-
 main .container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      top: 300px;
+      top: 400px;
       width: 400px;
       height: 200px;
 }
@@ -623,17 +671,10 @@ footer {
       .mobile-menu-icon {
             display: block;
       }
-      
-      .text-auto {
-            max-width: 80vw;
-            margin-left: auto;
-            margin-right: auto;
+
+      .btn-dark-mode {
+            right: 10px;
       }
 }
 
-@media screen and (min-width: 432px)
-{
-      body {
-            text-align: center;
-      }
-}
+
