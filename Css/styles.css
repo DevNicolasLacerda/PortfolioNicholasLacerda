@@ -13,11 +13,15 @@
       --black: #111;
 }
 
+section, body {
+      min-width: 460px;
+      min-height: 688px;
+}
+
 body {
-      background-color: #24252a;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      width: 100%;
 }
 
 li,
@@ -189,7 +193,6 @@ button:hover {
 main .home-section {
       height: 100vh;
       width: 100%; 
-      background: url(../assets/796863.webp);
       justify-content: center;
       display: flex;
       background-position: center;
@@ -415,12 +418,12 @@ main .container-autotext h1 {
 }
 
 main .container {
-      position: relative;
+      position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      top: 400px;
+      top: 550px;
       width: 400px;
       height: 200px;
 }
@@ -663,6 +666,7 @@ footer {
 @media screen and (max-width: 900px) {
       .btn_contato {
             display: none;
+            
       }
       .nav_links {
             display: none;
@@ -673,8 +677,37 @@ footer {
       }
 
       .btn-dark-mode {
-            right: 10px;
+            right: 5px;
+            left: auto;
+            position: absolute;
+      }
+
+      #voltar_topo_btn {
+            left: auto;
+      }
+
+      .links_voltar li {
+            margin: 0 5px;
+      }
+
+      .links_voltar a {
+            font-size: 1.0rem;
       }
 }
+
+@media screen and (max-width: 1000px) {
+      .btn_contato button {
+            width: 100px;
+            margin-right: 10px;
+            font-size: 14px;
+      }
+
+      .nav_links li a {
+            font-size: 15px;
+      }
+}
+
+
+
 
 
