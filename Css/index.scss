@@ -1,0 +1,29 @@
+$bgWidth: 10000px;
+$bgColor-primary: #111;
+$bgColor-secondary: #ffff;
+$bgBody-color: #24252a;
+
+body {
+  background-color: $bgBody-color;
+}
+
+.home-section {
+  background-color: $bgColor-primary;
+  background-size: $bgWidth 100%;
+}
+
+.typer {
+  animation: animateBg 3s linear infinite;
+}
+
+@keyframes animateBg {
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
+
+
+
+
+
+

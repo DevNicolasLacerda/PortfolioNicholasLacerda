@@ -1,0 +1,18 @@
+body {
+  background-color: #24252a;
+}
+
+.home-section {
+  background-color: #111;
+  background-size: 10000px 100%;
+}
+
+.typer {
+  animation: animateBg 3s linear infinite;
+}
+
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}/*# sourceMappingURL=index.css.map */
