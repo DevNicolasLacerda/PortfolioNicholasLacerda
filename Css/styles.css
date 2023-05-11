@@ -634,18 +634,16 @@ footer {
       width: 50px;
       height: 50px;
       padding: 5px;
-      display: flex;
       border-radius: 15px;
       background: rgb(77, 77, 77);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
       color: #313131;
-      justify-content: center;
-      align-items: center;
       cursor: pointer;
       outline: none;
       border: none;
       transition: all 0.4s;
       box-shadow: 2px 3px 10px #000;
+      z-index: 999;
 }
 
 #voltar_topo_btn.active {
@@ -682,16 +680,15 @@ footer {
             position: absolute;
       }
 
-      #voltar_topo_btn {
-            left: auto;
-      }
-
       .links_voltar li {
             margin: 0 5px;
       }
 
       .links_voltar a {
             font-size: 1.0rem;
+      }
+      body {
+            text-align: center;
       }
 }
 
@@ -705,7 +702,59 @@ footer {
       .nav_links li a {
             font-size: 15px;
       }
+      body {
+            text-align: center;
+      }
 }
+
+@media screen and (max-width: 400px){
+      #voltar_topo_btn {
+        right: 20px;
+        bottom: 20px;
+      }
+
+      .footer-content p{
+            padding: 10px;
+
+      }
+
+      footer {
+            width: 100%;
+      }
+
+      .footer-bottom {
+            width: 100%;
+      }
+
+      .btn-dark-mode {
+            right: -50px;
+      }
+      body {
+            text-align: center;
+      }
+      
+}
+
+@media screen and (max-width: 420px){ 
+      .btn-dark-mode {
+            right: -30px;
+      }
+      body {
+            text-align: center;
+      }
+
+}
+
+@media screen and (max-width: 380px){
+      .btn-dark-mode {
+            right: -60px;
+      }
+      body {
+            text-align: center;
+      }
+}
+
+
 
 
 
