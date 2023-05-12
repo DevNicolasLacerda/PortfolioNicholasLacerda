@@ -5,7 +5,8 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: "Roboto" Verdana, Tahoma, sans-serif;
+      scroll-behavior: smooth;
 }
 
 :root {
@@ -13,15 +14,11 @@
       --black: #111;
 }
 
-section, body {
-      min-width: 460px;
-      min-height: 688px;
-}
-
 body {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      max-width: 100%;
+      flex-wrap: wrap;
 }
 
 li,
@@ -35,6 +32,8 @@ button {
 }
 
 header {
+      position: relative;
+      width: max(100%);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -52,7 +51,6 @@ header {
 }
 
 /* menu web*/
-
 .nav_links {
       display: flex;
       list-style: none;
@@ -71,7 +69,7 @@ header {
 .nav_links li a {
       transition: all 0.3s ease 0s;
       letter-spacing: 1px;
-      font-size: 18px;
+      font-size: max(18px);
 }
 
 .nav_links a:after {
@@ -103,8 +101,6 @@ header {
 
 .mobile-menu-icon {
       background-color: transparent;
-      border: none;
-      cursor: pointer;
 }
 
 .mobile-menu {
@@ -155,7 +151,12 @@ header {
 
 .botao-mobile {
       border: none;
+      border-radius: none;
       background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      backdrop-filter: none;
+      z-index: 999;
 }
 
 .botao-mobile:hover {
@@ -191,45 +192,16 @@ button:hover {
 /*Conteudo principal*/
 
 main .home-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
       width: 100%; 
-      justify-content: center;
-      display: flex;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.btn-dark-mode {
-      border: 2px solid var(--white);
-      border-radius: 50%;
-      position: absolute;
-      margin: 5px;
-      top: 30px;
-      right: 35px;
-      width: 50px;
-      color: var(--white);
-      padding: 5px;
-}
-
-.btn-dark-mode:hover {
-      background: var(--white);
-}
-
-.btn-dark-mode i {
-      font-size: 1.8rem;
-}
-
-.btn-dark-mode i:hover{
-      color: var(--black);
 }
 
 main .sobre-section {
       height: 100vh;
       width: 100%;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
 }
 
 main .tecnologias-section {
@@ -248,91 +220,7 @@ main .contato-section {
       height: 100vh;
       width: 100%;
       background: rgb(134, 134, 134);
-      display: flex;
-      justify-content: center;
-      align-items: center;
 }
-
-/*
-main .contato-section .contato-titulo h1 {
-      color: var(#111);
-      font-family: "Caveat";
-      font-size: 45px;
-      margin: 15px;
-}
-
-main .contato-section .container-contato {
-      position: relative;
-      justify-content: center;
-      align-items: center;
-      width: 26em;
-      height: 35em;
-      background-color: var(--white);
-      border-radius: 25px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-      padding: 30px;
-}
-
-main .contato-section .container-contato h3 {
-      text-align: center;
-      font-size: 14px;
-      color: rgb(134, 134, 134);
-}
-
-main .contato-section .container-contato input {
-      border: none;
-      outline: none;
-      width: 13rem;
-      text-align: left;
-      height: 2.5rem;
-      margin: 20px;
-      border-radius: 0.6em;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-      padding: 5px;
-      color: rgba(0, 0, 0, 0.2);
-}
-
-main .contato-section .container-contato input:focus {
-      background: rgb(134, 134, 134);
-      transition: all 0.3s;
-      color: #000;
-}
-
-main .contato-section .container-contato #area_txt {
-      border: none;
-      outline: none;
-      width: 13rem;
-      text-align: left;
-      height: 9em;
-      margin: 20px;
-      border-radius: 0.6em;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-      padding: 5px;
-      color: rgba(0, 0, 0, 0.2);
-      resize: none;
-}
-
-main .contato-section .container-contato #area_txt:focus {
-      background: rgb(134, 134, 134);
-      transition: all 0.3s;
-      color: #000;
-}
-
-main .contato-section .container-contato #btn-enviar {
-      text-align: center;
-      border: none;
-      outline: none;
-      margin: 10px;
-      width: 13rem;
-      color: var(--white);
-}
-
-main .contato-section .container-contato #btn-enviar:hover {
-      background: #0f3ed6;
-}
-
-*/
 
 main .home-section .container-image-home {
       position: absolute;
@@ -356,8 +244,8 @@ main .home-section .container-autotext {
       align-items: center;
       text-align: center;
       padding-top: 150px;
-      height: 200px;
-      width: 400px;
+      height: max(100%);
+      width: max(100%);
 }
 
 .typer {
@@ -367,49 +255,16 @@ main .home-section .container-autotext {
       color: #d257b2;
       background-image: -webkit-linear-gradient(45deg, #d257b2 39%, #d5f910 100%, #985c67 37%);
       background-clip: text;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 }
 
 .cursor {
       position: absolute;
-      height: 25%;
+      height: 42px;
       border-left: 2px solid #4070F4;
 }
-/*
-
-main .home-section .container-autotext .auto-type {
-      position: relative;
-      font-size: 40px;
-      font-weight: 600;
-      overflow: hidden;
-      color: #d257b2;
-      background-image: -webkit-linear-gradient(45deg, #d257b2 39%, #d5f910 100%, #985c67 37%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-}
-
-main .home-section .container-autotext .auto-type:before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgb(10, 9, 9);
-      border-left: 2px solid #4070F4;
-      animation: animate 4s steps(12) infinite;
-}
-@keyframes animate{
-  40%, 60%{
-      left: calc(100% + 4px);
-  }
-  100%{
-      left: 0%;
-  }
-}
-*/
 
 main .container-autotext h1 {
       color: var(--white);
@@ -423,57 +278,33 @@ main .container {
       justify-content: center;
       align-items: center;
       text-align: center;
-      top: 550px;
-      width: 400px;
-      height: 200px;
+      top: 32em;
+      width: max(350px);
+      height: max(200px);
 }
 
-main .home-section #baixar-cv {
-      margin: 10px;
-      text-decoration: none;
-      width: 150px;
-      height: 50px;
-      padding: 5px;
-      font-size: 15px;
-      display: flex;
-      border-radius: 10px;
-      border: 2px solid var(--white);
-      background: rgb(10, 9, 9);
-      color: var(--white);
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      font-weight: bold;
-      outline: none;
-      transition: all 0.4s;
-}
-
-main .home-section #baixar-cv:hover {
-      background: var(--white);
-      color: var(--black);
-}
-
+main .home-section #baixar-cv,
 main .home-section #btn-linkedin {
       margin: 10px;
       text-decoration: none;
       width: 150px;
       height: 50px;
       padding: 5px;
-      font-weight: bold;
       font-size: 15px;
       display: flex;
       border-radius: 10px;
       border: 2px solid var(--white);
       background: rgb(10, 9, 9);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
       color: var(--white);
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      font-weight: bold;
       outline: none;
       transition: all 0.4s;
 }
 
+main .home-section #baixar-cv:hover,
 main .home-section #btn-linkedin:hover {
       background: var(--white);
       color: var(--black);
@@ -483,10 +314,10 @@ main .home-section #btn-linkedin:hover {
 
 footer {
       background-color: var(--black);
-      height: auto;
-      width: 100vw;
+      height: fit-content;
+      width: 100%;
+      padding-top: 20px;
       font-family: "Roboto Slab", sans-serif;
-      padding-top: 40px;
       color: var(--white);
 }
 
@@ -510,7 +341,8 @@ footer {
       max-width: 500px;
       margin: 10px auto;
       line-height: 28px;
-      font-size: 14px;
+      font-size: min(1vw) max(2vw);
+      padding: 3vw;
 }
 
 /*Links de redes sociais*/
@@ -520,7 +352,7 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 1rem 0 3rem 0;
+      margin: 1rem 0 2rem 0;
 }
 
 .redes_sociais li {
@@ -573,13 +405,12 @@ footer {
 
 .footer-bottom {
       background: #000;
-      width: 100vw;
+      width: max(100%);
       padding: 20px 0;
       text-align: center;
 }
 
 .footer-bottom p {
-      font-size: 14px;
       word-spacing: 2px;
       text-transform: capitalize;
 }
@@ -590,47 +421,12 @@ footer {
       font-weight: 200;
 }
 
-/* Personalizacao da scrollbar*/
-
-::-webkit-scrollbar-corner {
-      display: none;
-}
-
-::-webkit-scrollbar {
-      width: 6px;
-}
-
-::-webkit-scrollbar-track {
-      background-color: var(--black);
-}
-
-::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 6px;
-}
-
-::-webkit-scrollbar:horizontal {
-      height: 6px;
-      display: none;
-}
-::-webkit-scrollbar-track:horizontal {
-      padding: 3px;
-      background-color: var(--black);
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 6px;
-}
-
-/* fim Personalizacao da scrollbar*/
-
 /* Botao voltar topo*/
 #voltar_topo_btn {
       opacity: 0;
       position: fixed;
-      right: 10px;
-      bottom: 10px;
+      right: 2lvw;
+      bottom: 2lvw;
       width: 50px;
       height: 50px;
       padding: 5px;
@@ -661,112 +457,7 @@ footer {
 
 /* Fim Botao voltar topo*/
 
-@media screen and (max-width: 900px) {
-      .btn_contato {
-            display: none;
-            
-      }
-      .nav_links {
-            display: none;
-      }
 
-      .mobile-menu-icon {
-            display: block;
-      }
-
-      .btn-dark-mode {
-            right: 5px;
-            left: auto;
-            position: absolute;
-      }
-
-      .links_voltar li {
-            margin: 0 5px;
-      }
-
-      .links_voltar a {
-            font-size: 1.0rem;
-      }
-      body {
-            text-align: center;
-      }
-}
-
-@media screen and (max-width: 1000px) {
-      .btn_contato button {
-            width: 100px;
-            margin-right: 10px;
-            font-size: 14px;
-      }
-
-      .nav_links li a {
-            font-size: 15px;
-      }
-      body {
-            text-align: center;
-      }
-}
-
-@media screen and (max-width: 400px){
-      #voltar_topo_btn {
-        right: 20px;
-        bottom: 20px;
-      }
-
-      .footer-content p{
-            padding: 10px;
-
-      }
-
-      footer {
-            width: 100%;
-      }
-
-      .footer-bottom {
-            width: 100%;
-      }
-
-      .btn-dark-mode {
-            right: -50px;
-      }
-      body {
-            text-align: center;
-      }
-      
-}
-
-@media screen and (max-width: 420px){ 
-      .btn-dark-mode {
-            right: -30px;
-      }
-      body {
-            text-align: center;
-      }
-
-}
-
-@media screen and (max-width: 380px){
-      .btn-dark-mode {
-            right: -60px;
-      }
-      body {
-            text-align: center;
-      }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .logoReact {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
 
