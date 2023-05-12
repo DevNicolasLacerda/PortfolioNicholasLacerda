@@ -1,0 +1,44 @@
+
+@media screen and (max-width: 920px) {
+    header {
+          padding: 15px 5%;
+    }
+
+    .nav_links li a {
+          font-size: 15px;
+    }
+
+    .btn_contato {
+          display: none;
+    }
+
+    .nav_links {
+          display: none;
+    }
+
+    .mobile-menu-icon {
+          display: block;
+    }
+
+    .links_voltar li {
+          margin: 0 5px;
+    }
+
+    .links_voltar a {
+          font-size: 0.9rem;
+    }
+
+    .footer-content p{
+          padding: 10px;
+    }
+
+    .typer {
+          font-size: clamp( 20px, 8vw , 40px);
+    }
+
+    #voltar_topo_btn {
+          right: 10%;
+          bottom: 5%;
+    }
+
+}
