@@ -7,10 +7,15 @@
                   name="viewport"
                   content="width=device-width, initial-scale=1.0"
             />
+            <meta name="description" content="Portifólio - Nicholas Lacerda">
+            <meta name="theme-color" content="#000">
             <title>Portifólio - Nicholas Lacerda</title>
             <link rel="stylesheet" href="Css/styles.css" />
             <link rel="stylesheet" href="Css/index.css">
-            <link rel="icon" href="assets/logo_portifolio.png">
+            <link rel="stylesheet" href="Css/scrollbar.css">
+            <link rel="stylesheet" href="Css/global.css">
+            <link rel="stylesheet" href="Css/media.css">
+            <link rel="icon" href="assets/Img/logo_portifolio.png">
       </head>
       <body>
             <noscript>Por favor, ative o JavaScript para utilizar este site</noscript>
@@ -25,7 +30,7 @@
                         </ul>
 
                         <div class="mobile-menu-icon">
-                              <button onclick="menuShow()" class="botao-mobile"><img class="icon" src="assets/menu_white_36dp.svg" alt="Botao de abertura do menu mobile"></button>
+                              <button onclick="menuShow()" class="botao-mobile"><img class="icon" src="assets/svgs/menu_white_36dp.svg" alt="Botao de abertura do menu mobile"></button>
       
                         </div>
                   </nav>
@@ -45,9 +50,8 @@
             </div>
             <main>
                   <section id="home-section" class="home-section">
-                        <button name="btn-dark-mode" class="btn-dark-mode"><i class="fa-solid fa-moon"></i></button>
                         <div class="container-image-home">
-                              <img src="assets/reactjs-svgrepo-com.svg" class="logoReact" alt="Simbolo do framework ReactJs">
+                              <img class="logoReact" src="assets/svgs/reactjs-svgrepo-com.svg" alt="Simbolo do framework ReactJs">
                         </div>
                       <div class="container-autotext">
                         <h1>Olá, eu sou </h1>
@@ -60,11 +64,11 @@
                       <div class="container">
                         <!--<button class="btn_dark">Dark</button>-->
                         <a href="path_to_file" name="baixar-cv" id="baixar-cv" value="Baixar Curriculo" download="">Baixar CV</a>
-                        <a href="https://www.linkedin.com/in/nicholas-lacerda-110abb271/" name="btn-linkedin" id="btn-linkedin" value="link para o linkedin">Meu LinkedIn</a>        
+                        <a href="https://www.linkedin.com/in/nicholas-lacerda-110abb271/" target="_blank" name="btn-linkedin" id="btn-linkedin" value="link para o linkedin">Meu LinkedIn</a>        
                       </div>
                   </section>
                   <section id="sobre-section" class="sobre-section">
-                      
+            
                   </section>
                   <section id="projetos-section" class="projetos-section">
 
@@ -120,7 +124,6 @@
                   crossorigin="anonymous"
             ></script>
             <script src="Js/app.js"></script>
-        
             <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       </body>
