@@ -24,34 +24,34 @@ function menuShow() {
       let menuMobile = document.querySelector(".mobile-menu");
       if (menuMobile.classList.contains("open")) {
             menuMobile.classList.remove("open");
-            document.querySelector(".icon").src = "assets/svgs/menu_white_36dp.svg";
       } else {
             menuMobile.classList.add("open");
-            document.querySelector(".icon").src = "assets/svgs/close_white_36dp.svg";
       }
 }
 
-// Funcao dark and light mode
+const btnMobile = document.getElementById('hamburger');
 
+function toggleMenu(event) {
+    if (event.type === 'touchstart') event.preventDefault();
 
-// Texto automatico
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
 
-/*
-const text = document.querySelector(".auto-type");
+    const active = nav.classList.contains('active')
+    event.currentTarget.setAttribute('aria-expanded' , active);
 
-const textLoad = () => {
-setTimeout(() => {
-text.textContent = "Nicholas Lacerda";
-}, 0);
-setTimeout(() => {
-text.textContent = "Front-end";
-}, 4000);
-setTimeout(() => {
-text.textContent = "Developer";
-}, 8000); //1s = 1000 milliseconds
+    if (active) {
+        event.currentTarget.setAttribute('aria-label', 'Fechar menu')
+    } else {
+        event.currentTarget.setAttribute('aria-label', 'Abrir menu')
+    }
 }
-textLoad();
-setInterval(textLoad, 12000);
 
-*/
+btnMobile.addEventListener('click' , toggleMenu);
+btnMobile.addEventListener('touchstart' , toggleMenu);
+
+
+
+
+
 
