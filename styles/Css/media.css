@@ -1,0 +1,80 @@
+
+@media screen and (max-width: 920px) {
+    header {
+          padding: 15px 5%;
+    }
+
+    .typer {
+          font-size: clamp( 20px, 8vw , 40px);
+    }
+
+    .nav_links li a {
+          font-size: 15px;
+    }
+
+    .nav_links {
+          display: none;
+    }
+
+    .btn_contato {
+          display: none;
+    }
+
+    .links_voltar li {
+          margin: 0 5px;
+    }
+
+    .links_voltar a {
+          font-size: 0.9rem;
+    }
+
+    .footer-content p{
+          padding: 10px;
+    }
+
+    #voltar_topo_btn {
+          right: 10%;
+          bottom: 5%;
+    }
+
+    .btn-mobile {
+      display: flex;
+      padding: .5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: .5rem;
+    }
+
+    #hamburger {
+      color: #FFF;
+      border-top: 2px solid;
+      width: 30px;
+    }
+
+    #hamburger::after, #hamburger::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 8px;
+      transition: .3s;
+      position: relative;
+    }
+
+    #nav.active #hamburger {
+      border-top: transparent;
+    }
+
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -10px;
+    }
+
+}

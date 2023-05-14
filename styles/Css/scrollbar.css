@@ -1,0 +1,20 @@
+/* Personalizacao da scrollbar*/
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+}
+
+/* fim Personalizacao da scrollbar*/
