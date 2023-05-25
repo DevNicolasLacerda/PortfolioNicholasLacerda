@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto+Slab:wght@300&display=swap");
 
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Roboto" Verdana, Tahoma, sans-serif;
-}
-
 :root {
       --white: #edf0f1;
       --black: #111;
+      --bgStars: #111 url('/repo/assets/svgs/bg-stars.svg');
+      --fullBlack: #000;
+      --fontRoboto: "Roboto Slab";
+      --fontCaveat: "Caveat";
 }
 
 body {
@@ -22,7 +19,7 @@ body {
 li,
 a,
 button {
-      font-family: "Roboto Slab", sans-serif;
+      font-family: var(--fontRoboto), sans-serif;
       font-weight: 500;
       font-size: 16px;
       color: var(--white);
@@ -44,8 +41,8 @@ header {
       color: var(--white);
       cursor: pointer;
       margin-right: auto;
-      font-family: "Caveat";
-      font-size: 45px;
+      font-family: var(--fontCaveat);
+      font-size: 3em;
 }
 
 /* menu web*/
@@ -108,15 +105,16 @@ header {
 }
 
 .mobile-menu ul li {
-      margin: 20px;
+      margin: 2em;
       text-align: right;
       padding-right: 2rem;
 }
 
-.mobile-menu ul li:hover {
-      border-radius: 10px;
+.mobile-menu ul li a:hover {
       transition: .4s;
       padding-right: 2.5rem;
+      color: #4070F4;
+      transition: all 0.4s;
 }
 
 .mobile-menu .nav-links-mobile {
@@ -126,12 +124,7 @@ header {
 
 .nav-links-mobile a {
       color: var(--white);
-      font-size: 18px;
-}
-
-.nav-links-mobile a:hover {
-      color: #4070F4;
-      transition: all 0.4s;
+      font-size: 1.3em;
 }
 
 .btn-mobile {
@@ -166,35 +159,26 @@ header {
 
 /*Conteudo principal*/
 
+main .logoSection {
+      position: relative;
+      color: #edf0f1;
+      bottom: 50px;
+      font-size: 5em;
+      font-family: var(--fontCaveat), sans-serif;
+      margin: auto, 0, auto, 0;
+      z-index: 2;
+}
+
+/* Home section */
+
 main .home-section {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: calc(100vh + 200px);
+      height: 100vh;
       width: 100%; 
-}
-
-main .sobre-section {
-      height: 100vh;
-      width: 100%;
-}
-
-main .tecnologias-section {
-      height: 100vh;
-      width: 100%;
-      background: rgb(20, 135, 243);
-}
-
-main .projetos-section {
-      height: 100vh;
-      width: 100%;
-      background: rgb(56, 194, 22);
-}
-
-main .contato-section {
-      height: 100vh;
-      width: 100%;
-      background: rgb(134, 134, 134);
+      background: var(--bgStars); 
+       
 }
 
 main .home-section .container-image-home {
@@ -263,13 +247,12 @@ main .home-section #btn-linkedin {
       margin: 10px;
       text-decoration: none;
       width: 150px;
-      height: 50px;
+      height: 60px;
       padding: 5px;
       font-size: 15px;
       display: flex;
       border-radius: 10px;
       border: 2px solid var(--white);
-      background: rgb(10, 9, 9);
       color: var(--white);
       justify-content: center;
       align-items: center;
@@ -285,9 +268,158 @@ main .home-section #btn-linkedin:hover {
       color: var(--black);
 }
 
+/* Home section fim */
+
+/* Sobre section */
+
+main .sobre-section {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      width: 100%;
+      background:  var(--bgStars);
+      z-index: 3;
+}
+
+main .sobre-section::after {
+      content: '';
+      background-image: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+      position: absolute;
+      inset: 0;
+      transform: skewY(-5deg);
+      z-index: 1;
+}
+
+main .sobre-section .container-sobre {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(25px);
+      width: 80%;
+      height: auto;
+      border-radius: 25px;
+      margin: auto, 0, auto, 0;
+      padding: 1.5rem;
+      box-shadow: 10px 10px rgba(0, 0, 0, 0.8);
+      z-index: 3;
+}
+
+main .sobre-section .container-sobre .conteudo {
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.5em;
+      font-size: max(1.5em);
+      color: var(--white);
+      line-height: 1.5em;
+      font-family: "Roboto", sans-serif;
+}
+
+/* Sobre section fim */
+
+/* Projetos section */
+
+main .projetos-section {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      background:  var(--bgStars);
+}
+
+main .projetos-section .container-projetos {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 80%;
+      height: auto;
+      border-radius: 25px;
+      margin: auto, 0, auto, 0;
+      padding: 1.5rem;
+      box-shadow: 10px 10px rgba(0, 0, 0, 0.8);
+      display: flex;
+}
+
+main .projetos-section .container-projetos .item-projeto {
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #5a5a5a;
+      backdrop-filter: blur(15px);
+      width: 80%;
+      height: 40vh;
+      border-radius: 0.8em;
+      padding: 1em;
+      margin: 1em;
+}
+
+main .projetos-section .container-projetos .item-projeto:hover {
+      transform: scale(1.05);
+      transition: all 0.4s;
+}
+
+/* Projetos section fim */
+
+/* Habilidades section */
+main .habilidades-section .LogoHabilidade {
+      position: absolute;
+      top: 0;
+      color: #edf0f1;
+      font-size: 5em;
+      font-family: "Caveat", sans-serif;
+}
+
+main .habilidades-section {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      height: 120vh;
+      width: 100%;
+      padding: 1.5rem;
+      background: var(--bgStars);
+}
+
+main .habilidades-section .container-habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 50em;
+      padding: 0.5rem;
+      border-radius: 25px;
+      background-color: rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 10px rgba(255, 255, 255, 0.1);
+}
+
+.container-habilidades .habilidades {
+      height: 6em;
+      width: 6em;
+      margin: 0.8em;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.habilidades img {
+      height: 6em;
+      width: 5em;
+      background: transparent;
+}
+
+
+.habilidades:hover {
+      transform: rotate(360deg) scale(1.05);
+      transition: all 0.6s ease;
+}
+
+
+/* Habilidades section fim */
+
 /*Parte principal do footer*/
 
 footer {
+      border-top: 2px solid var(--white);
       background-color: var(--black);
       height: fit-content;
       width: 100%;
@@ -379,7 +511,7 @@ footer {
 /*Parte de baixo do footer*/
 
 .footer-bottom {
-      background: #000;
+      background: var(--fullBlack);
       width: max(100%);
       padding: 20px 0;
       text-align: center;
@@ -432,8 +564,26 @@ footer {
 
 /* Fim Botao voltar topo*/
 
+/* Animacao de scroll */
 
+.hidden {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100%);
+      transition: all 1s;
+}
 
+@media(prefers-reduced-motion) {
+      .hidden {
+            transition: none;
+      }
+}
+
+.show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+}
 
 
 
