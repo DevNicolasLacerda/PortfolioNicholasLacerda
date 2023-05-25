@@ -21,7 +21,6 @@ body {
   }
 }
 
-
 .logoReact {
     animation: App-logo-spin infinite 20s linear;
 }
@@ -35,35 +34,53 @@ body {
     transform: rotate(360deg);
   }
 }
-/*
- {
-  background: linear-gradient(-45deg, #6ca9ee, #e73c7e, #23a6d5, #23d5ab);
+
+.habilidades {
+  background: linear-gradient(-45deg, #ffeb3b, #74efff, #9c27b0);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
+  animation: gradient-bg 10s ease infinite;
 }
-  
-  @keyframes gradient {
-  0% {
+
+@keyframes gradient-bg {
+0% {
   background-position: 0% 50%;
-  }
-  
-  50% {
+}
+50% {
   background-position: 100% 50%;
-  }
-  
-  100% {
-  background-position: 0% 50%;
-  }
 }
-*/
+100% {
+  background-position: 0% 50%;
+}
+}
 
+.container-projetos {
+  background: linear-gradient(-45deg, #ffeb3b, #74efff, #9c27b0);
+  background-size: 400% 400%;
+  animation: gradient-bg 20s ease infinite;
+}
 
+@keyframes gradient-bg {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
 
-
-
-
-
-
+@mixin dots($count) {
+  $text-shadow: ();
+  @for $i from 0 through $count {
+    $text-shadow: $text-shadow,
+                 (-.5+(random()) * 3) + em
+                 (-.5+(random()) * 3) + em
+                 7px
+                 hsla(random() * 360, 100%, 50%,.9);
+  }
+  text-shadow: $text-shadow;
+}
 
 
