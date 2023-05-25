@@ -20,19 +20,17 @@ window.addEventListener("scroll", () => {
 
 // Funcao para abrir e fechar o menu
 
-function menuShow() {
-      let menuMobile = document.querySelector(".mobile-menu");
-      if (menuMobile.classList.contains("open")) {
-            menuMobile.classList.remove("open");
-      } else {
-            menuMobile.classList.add("open");
-      }
-}
-
 const btnMobile = document.getElementById('hamburger');
+let menuMobile = document.querySelector(".mobile-menu");
 
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();
+
+    if (menuMobile.classList.contains("open")) {
+      menuMobile.classList.remove("open");
+    } else {
+      menuMobile.classList.add("open");
+    }
 
     const nav = document.getElementById('nav');
     nav.classList.toggle('active');
