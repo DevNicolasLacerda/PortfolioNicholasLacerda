@@ -14,6 +14,7 @@
             <link rel="stylesheet" href="styles/Css/global.css">
             <link rel="stylesheet" href="styles/Css/media.css">
             <link rel="icon" href="assets/Img/logo_portifolio.png">
+            <script defer src="Js/scroll.js"></script>
       </head>
       <body>
             <noscript>Por favor, ative o JavaScript para utilizar este site</noscript>
@@ -24,13 +25,13 @@
                           <li><a href="#home-section">Home</a></li>
                           <li><a href="#sobre-section">Sobre</a></li>
                           <li><a href="#projetos-section">Projetos</a></li>
-                          <li><a href="#tecnologias-section">Tecnologias</a></li>
+                          <li><a href="#habilidades-section">Habilidades</a></li>
                       </ul>
-                        <button type="button" onclick="menuShow()" aria-label="Abrir menu" 
+                        <button type="button" aria-label="Abrir menu" 
                         aria-haspopup="true" aria-controls="nav-links" aria-expanded="false" 
                         id="btn-mobile" class="btn-mobile"><span id="hamburger"></span></button>
                   </nav>
-                  <a href="#contato-section" class="btn_contato">Contato</a>
+                  <a href="#contatos" class="btn_contato">Contato</a>
             </header>
 
             <div class="mobile-menu">
@@ -38,47 +39,101 @@
                         <li><a href="#home-section">Home</a></li>
                         <li><a href="#sobre-section">Sobre</a></li>
                         <li><a href="#projetos-section">Projetos</a></li>
-                        <li><a href="#tecnologias-section">Tecnologias</a></li>
-                        <li><a href="#contato-section">Contato</a></li>
+                        <li><a href="#habilidades-section">Habilidades</a></li>
+                        <li><a href="#contatos">Contato</a></li>
                   </ul>
             </div>
             <main>
                   <section id="home-section" class="home-section">
-                      <div class="container-image-home">
-                        <img class="logoReact" src="assets/svgs/reactjs-svgrepo-com.svg" alt="Simbolo do framework ReactJs">
+                      <div class="container-image-home hidden">
+                        <img class="logoReact hidden" src="assets/svgs/reactjs-svgrepo-com.svg" alt="Simbolo do framework ReactJs">
                       </div>
-                      <div class="container-autotext">
+                      <div class="container-autotext hidden">
                         <h1>Olá, eu sou </h1>
                         <br>
                               <span class="typer" id="main" data-words="Nicholas Lacerda, Front-End, Developer" data-delay="100" data-deleteDelay="1000"></span>
                               <span class="cursor" data-owner="main"></span>
-                        <!-- <h1>Olá, eu sou</h1>
-                        <h1 class="text-auto"><span class="auto-type"></span></h1>-->
                       </div>
                       <div class="container">
                         <!--<button class="btn_dark">Dark</button>-->
-                        <a href="path_to_file" name="baixar-cv" id="baixar-cv" value="Baixar Curriculo" download="">Baixar CV</a>
-                        <a href="https://www.linkedin.com/in/nicholas-lacerda-110abb271/" target="_blank" name="btn-linkedin" id="btn-linkedin" value="link para o linkedin">Meu LinkedIn</a>        
+                        <a href="path_to_file" name="baixar-cv" id="baixar-cv" class="hidden" value="Baixar Curriculo" download="">Baixar CV</a>
+                        <a href="https://www.linkedin.com/in/nicholas-lacerda-110abb271/" target="_blank" name="btn-linkedin" id="btn-linkedin" class="hidden" value="link para o linkedin">Meu LinkedIn</a>        
                       </div>
                   </section>
                   <section id="sobre-section" class="sobre-section">
+                        <h1 class="logoSection hidden">Sobre</h1>
+                        <div class="container-sobre hidden">
+                              <div class="conteudo">
+                                    <p>Olá, me chamo Nicholas, tenho 18 anos e sou um jovem determinado e ávido por aprender. 
+                                          Apesar de não possuir experiência no mercado de trabalho, 
+                                          estou atualmente cursando um curso de Desenvolvimento de Sistemas de nível técnico na Escola Técnica Etec Lauro Gomes, 
+                                          sou altamente motivado e possuo uma vontade inabalável de se desenvolver profissionalmente. 
+                                          Acredito que com minha curiosidade e disposição para enfrentar novos desafios, certamente serei capaz de adquirir rapidamente 
+                                          as habilidades necessárias para realizar com sucesso a função que me for atribuída. 
+                                          Sou apaixonado por programação e tecnologia, por isso, almejo me tornar um grande Cientista da Computação.
+                                    </p>
+
+                              </div>
+                        </div>
             
                   </section>
                   <section id="projetos-section" class="projetos-section">
+                    <h1 class="logoSection hidden">Projetos</h1>
+                        <div class="container-projetos hidden">
+                              <div class="item-projeto">
 
+                              </div>
+                              <div class="item-projeto">
+
+                              </div>
+                              <div class="item-projeto">
+
+                              </div>
+                        </div>
                   </section>
-                  <section id="tecnologias-section" class="tecnologias-section">
-
-                  </section>
-                  <section id="contato-section" class="contato-section">
-
+                  <section id="habilidades-section" class="habilidades-section">
+                        <h1 class="LogoHabilidade hidden">Habilidades</h1>
+                        <div class="container-habilidades hidden">
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-html.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-css.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-javascript.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-reagir.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-sass-avatar.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-tailwindcss.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-mysql.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-node-js.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-git.svg" alt="">
+                              </div>
+                              <div class="habilidades">
+                                    <img src="assets/svgs/icons8-github.svg" alt="">
+                              </div>
+                                    
+                        </div>
                   </section>
             </main>
             <footer>
                 <div class="footer-content">
                     <h3 class="logo_footer">Nicholas Dev</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nemo earum culpa dicta totam, reprehenderit eveniet minus ex id ratione doloribus voluptate ad ipsam! Tempore blanditiis repudiandae veniam minus id.</p>
-                    <ul class="redes_sociais">
+                    <p>Sou um amante da programação e um sonhador determinado<br>
+                        Sinta-se livre para me contatar!</p>
+                    <ul id="contatos" class="redes_sociais">
                         <li><a href="https://github.com/DevNicolasLacerda" target="_blank" rel="Abrir GitHub"><i class="fa fa-github"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/nicholas-lacerda-110abb271" target="_blank" rel="Abrir LinkedIn"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="https://wa.me/5511940663975" target="_blank" rel="Abrir whatsapp"><i class="fa fa-whatsapp"></i></a></li>
@@ -88,8 +143,7 @@
                         <li><a href="#home-section">Home</a></li>
                         <li><a href="#sobre-section">Sobre</a></li>
                         <li><a href="#projetos-section">Projetos</a></li>
-                        <li><a href="#tecnologias-section">Tecnologias</a></li>
-                        <li><a href="#contato-section">Contato</a></li>
+                        <li><a href="#habilidades-section">Habilidades</a></li>
                     </ul>
                 </div>
                 <div class="footer-bottom">
