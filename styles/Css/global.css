@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto" Verdana, Tahoma, sans-serif;
+    font-family: "Roboto", Verdana, Tahoma, sans-serif;
     -webkit-scroll-behavior: smooth;
     scroll-behavior: smooth;
 }
