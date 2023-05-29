@@ -43,6 +43,13 @@ function toggleMenu(event) {
     } else {
         event.currentTarget.setAttribute('aria-label', 'Abrir menu')
     }
+
+    document.onclick = function(clickevent) {
+      if (clickevent.target.id !== "hamburger" && clickevent.target.id !== "mobile-menu") {
+            menuMobile.classList.remove("open");
+            nav.classList.remove('active');
+      }
+    }
 }
 
 btnMobile.addEventListener('click' , toggleMenu);
