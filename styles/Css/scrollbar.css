@@ -1,0 +1,37 @@
+/* Personalizacao da scrollbar*/
+
+body::-webkit-scrollbar-corner {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+}
+
+.container-projetos::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.container-projetos::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container-projetos::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.container-projetos::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+}
+
+/* fim Personalizacao da scrollbar*/
